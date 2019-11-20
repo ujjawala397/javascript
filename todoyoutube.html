@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input</title>
+</head>
+<body>
+		<div>
+		<input type="text" id='add'>
+		<button onclick="push()">Add</button>
+		</div>
+		<ol id="i1"></ol>
+	<script>
+		function push()
+		{
+			var a=document.getElementById('add').value;
+			var b=document.createTextNode(a);
+			var c=document.createElement('li');
+			c.appendChild(b);
+			document.getElementById('i1').appendChild(c);
+		}
+
+	</script>
+</body>
+</html>

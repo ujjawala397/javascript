@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+</head>
+<script>
+	function fun(x)
+	{	
+		x.style.height='200px';
+
+		document.getElementById("i2").style.display="block";
+	}
+	function fun1(x)
+	{	
+		x.style.height='200px';
+		document.getElementById("i2").style.display="block";
+	}
+
+	for(var i=0;i<5;i++)
+	{
+		document.write("the number is "+i+"<br>")
+	}
+</script>
+<body>
+<img id="i1" src="logo.png" style="display: none;">
+<button onclick="document.getElementById('i1').style.display='block'">image</button>
+<img id="i2" src="fb.png" style="display: none;">
+<button onclick="fun1(this)">show</button>
+<button onclick="document.getElementById('demo').innerHTML='35'">yes</button>
+<p id="demo"></p>
+
+
+
+
+
+<table border="2px;">
+	<tr>
+		<th style="width:200px" colspan='3'>1</th>
+		<th>j</th>
+	</tr>
+	<tr>
+		<th>qw</th>
+		<th>qw</th>
+		<th>qw</th>
+		<th>gvbhegjhjh</th>
+	</tr>
+	<tr >
+		<th rowspan='2'>g</th>
+		<th>e</th>
+	</tr>
+	<tr>
+		<th>qw</th>	
+		<th>qw</th>
+		<th>qw</th>
+		
+		
+	</tr>
+</table>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validate</title>
+</head>
+<script>
+	function validate()
+	{
+
+		var name=document.forms["myform"]["name"];
+		if(name.value=="")
+		{
+			window.alert('Please Enter the name properly');
+			name.focus();
+			return false;
+		}
+		if(name.value!="")
+		{
+			var a=name.value;
+			var len=a.length;
+			if(len<=3)
+			{
+				alert('not valid');
+			}
+		}
+
+	}
+</script>
+<body>
+	<fieldset style="text-align: center; width: 400px; margin-left: 400px" ><legend>Contact Us</legend>
+	<form name="myform">
+		<table>
+<tr><th>Name:</th><th><input type="text" name="name" required></th></tr><br>
+
+<tr><th>Email:</th><th><input type="email" name="Email" required></th></tr><br>
+
+<tr><th>Phone No. :</th><th><input type="text" name="Phone"></th></tr><br>
+<tr><th>Query</th><th>
+<textarea required=""></textarea>
+</th></tr><tr><th>
+<button onclick="validate()"> Submit </button></th></tr>
+</table>
+</form>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+.sai
+{
+	position: relative;
+	top:50px;
+	left:430px;
+	border-radius: 10px;
+	width: 400px;
+	height:400px;
+}
+.sai label
+{
+	font-size: 20px;
+	font-family: sans-serif;
+	margin-left: 5px;
+	color:black;
+	margin-bottom: 5px;
+}
+.sai input
+{
+	position: absolute;
+	border-radius: 5px;
+	height:18px;
+	width: 180px;
+	right:45px;
+}
+.sai select
+{
+	position: absolute;
+	right: 53px;
+	width: 120px;
+	height:20px;
+}
+
+</style>
+</head>
+<body>
+<script>
+function validate()
+{
+	var name=document.forms["myform"]["name"];
+	var email=document.forms["myform"]["email"];
+	var pass=document.forms["myform"]["password1"];
+	var pass1=document.forms["myform"]["password2"];
+	var gender=document.forms["myform"]["gender"];
+
+	if(name.value=="")
+	{
+		window.alert("please enter the name");
+		name.focus();
+		return false;
+	}
+	if(name.length>10)
+	{
+		window.alert("lenght of name exceeded the limit");
+		return false;
+	}
+	if(email.value=="")
+	{
+		window.alert("plz,enter the email");
+		name.focus();
+		return false;
+	}
+	
+    if(pass.value=="")
+    {
+        window.alert("plz enter password");
+        pass.focus();
+        return false
+    }
+    if(pass1.value=="")
+    {
+        window.alert("plz enter correct password");
+        pass1.focus();
+        return false
+    }
+    document.write("form has been submitted");
+	return true;
+}
+</script>
+<div class="sai">
+<form method="get" name="myform" >
+<label id="1">Name:</label><input type="text" name="name" max=10 placeholder="enter the name"><br><br><br>
+<label>Email:</label><input type="text" name="email"   placeholder="enter the email"><br><br><br>
+<label id="2">Password:</label><input type="password" name="password1"  placeholder="enter password"><br><br><br>
+<label  id="3">Correct Password:</label><input type="password" name="password2"><br><br><br>
+<label id="4">Gender:</label><select name="gender">
+	<option value="-1" selected>[choose yours]</option>
+	<option value="1">Male</option>
+	<option value="2">Female</option>
+</select><br><br><br>
+<input type="submit" onclick="validate()" style="position: absolute;left:140px;width:70px;height:25px;font-size: 17px;" id="4" name="submit" value="submit">
+</form>
+</div>
+</body>
+</html>

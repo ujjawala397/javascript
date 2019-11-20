@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input</title>
+</head>
+<body>
+		<div>
+		<input type="text" name="todos" id='add'><button onclick="push()">Add</button>
+		<div  id="i1"></div>
+	</div>
+	<script>
+		var todo=[];
+		function push()
+		{
+			var a=document.getElementById('add').value;
+			todo.push(a);
+			document.getElementById('i1').innerHTML=todo;
+
+		}
+		function pop()
+		{
+			todo.pop();
+			var b=document.getElementById('i1').innerHTML=todo;
+		}
+	</script> 
+
+
+</body>
+</html>

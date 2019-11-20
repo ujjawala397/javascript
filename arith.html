@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arithmetic</title>
+</head>
+<body>
+<input type="number" id="i1">
+<input type="number" id="i2">
+<h1 id="i3">Result:</h1>
+
+
+<button onclick="mul()">Multiply</button>
+<button onclick="add()">Addition</button>
+<button onclick="sub()">Subtraction</button>
+</body>t
+
+
+
+
+<script>
+	function mul()
+	{
+		x=document.getElementById('i1').value;
+		y=document.getElementById('i2').value;
+		document.getElementById('i3').innerHTML=x*y;
+	}
+	function add()
+	{
+		x=document.getElementById('i1').value;
+		y=document.getElementById('i2').value;
+		document.getElementById('i3').innerHTML=x+y;
+	}
+	function sub()
+	{
+		x=document.getElementById('i1').value;
+		y=document.getElementById('i2').value;
+		document.getElementById('i3').innerHTML=x-y;
+	}
+</script>
+
+</html>

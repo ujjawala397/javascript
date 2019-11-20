@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+<style>
+#block1{
+	height: 400px;
+	width: 400px;
+	position: relative;
+	outline: 1px solid black;
+}
+#block2{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	background-color: orange;
+}
+</style>
+</head>
+<body>
+	<p><button onclick="fun()">Move block</button> </p>
+	<div id="block1">
+		<div id="block2">
+			
+		</div>
+	</div>
+	<script>
+		function fun()
+		{
+			var a=document.getElementById('block2');
+			var pos=0;
+			var id=setInterval(fun1,5);
+			function fun1(){
+			if(pos==350){
+				clearInterval(id);
+						}
+			else{
+				pos++;
+				a.style.top=pos+ "px";
+				a.style.left=pos+"px";
+				}
+
+			}
+		}
+	</script>
+</body>
+</html>

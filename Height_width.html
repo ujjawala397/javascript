@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Height and Width</title>
+<script>
+	function fun()
+	{
+		x=document.getElementById('i1').innerHTML="width : "+window.outerWidth;
+		y=document.getElementById('i2').innerHTML="height : "+window.outerHeight;
+	}
+</script>
+
+</head>
+
+<body onload="fun()" onresize="fun()">
+	<h1 id="i1"></h1>
+	<h1 id="i2"></h1>
+</body>
+
+</html>
